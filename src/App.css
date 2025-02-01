@@ -1,1 +1,33 @@
 @import "tailwindcss";
+
+
+@media screen and (max-width: 708px)   {
+
+
+#inputfield{
+  margin: 1vw;
+width:80% ;
+
+}
+
+#card{
+  width: 80%;
+}
+
+#label{
+  margin: 2vw;
+  font-size: 12px;
+}
+
+#footer{
+  width: 85%;
+  margin-top: 9vw;
+}
+
+#head{
+  text-align: center;
+  font-size: 4vw;
+}
+
+
+}
