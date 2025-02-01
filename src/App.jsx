@@ -61,24 +61,24 @@ function App() {
     return (
       <div className='w-full h-[100vh] bg-[#F0F2F6] flex justify-center items-center'>
 
-        <div className='w-[50vw] h-[40vh] bg-[#FFFFFF] rounded-md'>
+        <div id='card' className='w-[50vw] h-[40vh] bg-[#FFFFFF] rounded-md'>
 
 
-          <h1 className='text-2xl p-7'>Currency Convertor</h1>
+          <h1 className='text-2xl p-7' id='head'>Currency Convertor</h1>
 
           <div className='flex justify-between items-center px-6'>
 
             <div className='flex flex-col'>
 
-              <label>Amount:</label>
-              <input type="number" name='amount' className='bg-slate-100 h-12 p-3 border-none rounded-md' value={amount} onChange={handleChange} />
+              <label id='label'>Amount:</label>
+              <input type="number" id='inputfield' name='amount' className='bg-slate-100 h-12 p-3 border-none rounded-md' value={amount} onChange={handleChange} />
 
             </div>
 
             <div className='flex flex-col'>
 
-              <label>FromCurrency:</label>
-              <select name="fromCurrency" className='bg-slate-100 h-12 border-none rounded-md' value={fromCurrency} onChange={handleChange}>
+              <label id='label'>FromCurrency:</label>
+              <select name="fromCurrency" id='inputfield' className='bg-slate-100 h-12 border-none rounded-md' value={fromCurrency} onChange={handleChange}>
                 {Object.keys(exchange).map(currency => (<option key={currency} value={currency}>{currency}</option>))}
               </select>
 
@@ -86,8 +86,8 @@ function App() {
             </div>
             <div className='flex flex-col'>
 
-              <label>ToCurrency:</label>
-              <select name="toCurrency" className='bg-slate-100 h-12 border-none rounded-md' value={toCurrency} onChange={handleChange}>
+              <label id='label'>ToCurrency:</label>
+              <select name="toCurrency" id='inputfield' className='bg-slate-100 h-12 border-none rounded-md' value={toCurrency} onChange={handleChange}>
               {Object.keys(exchange).map(currency => (<option key={currency} value={currency}>{currency}</option>))}
               </select>
 
@@ -98,7 +98,7 @@ function App() {
           </div>
 
 
-          <div className='w-[40%] h-[7vh] rounded-md bg-[#E4F0F6] m-6 mt-10 flex items-center justify-center'>
+          <div id='footer' className='w-[40%] h-[7vh] rounded-md bg-[#E4F0F6] m-6 mt-10 flex items-center justify-center'>
 
             <h1>Converted Amount:<b>{convertedAmount}</b></h1>
 
